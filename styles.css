@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Montserrat+Subrayada:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 19px;
 }
 
 html {
@@ -13,10 +13,11 @@ html {
 }
 
 .snap-pages {
-    height: 300vh;
+    height: 100vh;
     width: 100vw;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .slide {
@@ -68,12 +69,12 @@ html {
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: whitesmoke;
     scroll-snap-align: start;
 }
 
 #newton-information-center {
-    font-size: 80px;
+    font-size: 100px;
     left: 50%;
     text-align: center;
     white-space: nowrap;
@@ -81,53 +82,197 @@ html {
 
 .wh-container {
     display: flex;
+    flex-direction: column;
     position: absolute;
-    height: 500px;
-    width: 500px;
-    top: 50%;
+    height: 380px;
+    width: 380px;
+    top: 4%;
     left: 50%;
     background-color: brown;
     justify-content: center;
     align-items: center;
     color: white;
     border-radius: 50%;
+    text-align: center;
+}
+
+.wh-container > p {
+    max-width: 80%;
 }
 
 .wh-container:nth-child(2) {
-    height: 500px;
-    width: 500px;
-    top: 40%;
-    left: 5%;
+    height: 400px;
+    width: 400px;
+    top: 55%;
+    left: 25%;
 }
 
 .wh-container:nth-child(3) {
-    height: 400px;
-    width: 400px;
-    top: 60%;
-    left: 70%;
+    height: 500px;
+    width: 500px;
+    top: 40%;
+    left: 65%;
 }
 
 .wh-container:nth-child(4) {
     height: 500px;
     width: 500px;
-    top: 10%;
-    left: 10%;
+    top: 6%;
+    left: 8%;
 }
 
-.motion-laws {
+#motion-laws {
+    display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: white;
-    scroll-snap-align: start;
 }
 
 .motion-laws-left {
     height: 100%;
-    width: 55%;
-    background-color: royalblue;
+    width: 45%;
 }
 
 .motion-laws-right {
+    display: flex;
     height: 100%;
-    width: 45%;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+}
+
+.motion-laws-right > p {
+    font-size: 130px;
+    text-align: center;
+    max-width: 60%;
+}
+
+.law-of-motion {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.law-of-motion > p {
+    max-width: 80%;
+    text-align: center;
+}
+
+.law-of-motion:nth-child(1) {
+    height: 180px;
+    width: 450px;
+    top: 10%;
+    left: 50%;
+    animation-delay: 0.2s;
+}
+.law-of-motion:nth-child(2) {
+    height: 170px;
+    width: 500px;
+    top: 50%;
+    left: 55%;
+    animation-delay: 0.5s;
+}
+
+.law-of-motion:nth-child(3) {
+    height: 220px;
+    width: 500px;
+    top: 0%;
+    left: 10%;
+    animation-delay: 0.1;
+}
+
+#lesson-information-slide {
+    height: 100vh;
+    background-color: white;
+    scroll-snap-align: start;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#lesson-information-slide::-webkit-scrollbar {
+    display: none;
+}
+
+#lesson-information {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+#lesson-information::-webkit-scrollbar {
+    display: none;
+}
+
+#inertia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inertia > h1 {
+    margin-top: 50px;
+    font-size: 100px;
+}
+
+#inertia > h2 {
+    position: relative;
+    top: -15px
+}
+
+.inertia-information {
+    margin-top: 50px;
+}
+
+#acceleration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#acceleration > h1 {
+    margin-top: 50px;
+    font-size: 100px;
+}
+
+#acceleration > h2 {
+    position: relative;
+    top: -15px
+}
+
+#action-reaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#action-reaction > h1 {
+    margin-top: 50px;
+    font-size: 100px;
+}
+
+#action-reaction > h2 {
+    position: relative;
+    top: -15px
+}
+
+.inertia-information {
+    margin-top: 50px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
